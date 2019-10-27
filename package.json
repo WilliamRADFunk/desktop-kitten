@@ -1,0 +1,19 @@
+{
+  "name": "desktop-kitten",
+  "version": "0.0.1",
+  "description": " Use/Experiment with twoJs library to make an automated kitten in local browser on desktop.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WilliamRADFunk/desktop-kitten.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WilliamRADFunk/desktop-kitten/issues"
+  },
+  "homepage": "https://github.com/WilliamRADFunk/desktop-kitten#readme"
+}
