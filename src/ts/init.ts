@@ -23,6 +23,10 @@ export default () => {
 
     const head = two.makeEllipse(300, 500, 50, 25);
     head.fill = '#333333';
+    const ear1 = two.makePolygon(250, 250, 300, 250, false);
+    ear1.fill = '#333333';
+    const ear2 = two.makePolygon(275, 275, 325, 275, false);
+    ear2.fill = '#333333';
 
     // Bind a function to scale and rotate the group
     // to the animation loop.
