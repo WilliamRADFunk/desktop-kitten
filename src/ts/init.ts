@@ -21,6 +21,9 @@ export default () => {
     group.scale = 0;
     group.noStroke();
 
+    const head = two.makeEllipse(300, 500, 50, 25);
+    head.fill = '#333333';
+
     // Bind a function to scale and rotate the group
     // to the animation loop.
     two.bind(Two.Events.update, () => {
@@ -29,7 +32,7 @@ export default () => {
     if (group.scale > 0.9999) {
         group.scale = group.rotation = 0;
     }
-    var t = (1 - group.scale) * 0.125;
+    const t = (1 - group.scale) * 0.125;
     group.scale += t;
     group.rotation += t * 4 * Math.PI;
     }).play();  // Finally, start the animation loop
