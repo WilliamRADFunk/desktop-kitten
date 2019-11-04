@@ -21,17 +21,17 @@ export default () => {
     group1.scale = 0;
     group1.noStroke();
 
+    const ear1 = two.makeRectangle(0, 0, 30, 30);
+    ear1.fill = '#333333';
+    const ear1Inner = two.makeRectangle(0, 0, 20, 20);
+    ear1Inner.fill = '#DDDDDD';
+
+    const group2 = two.makeGroup([ear1, ear1Inner]);
+    group2.translation.set(350, 400);
+    group2.rotation = 0.4;
+
     const head = two.makeEllipse(300, 500, 50, 25);
     head.fill = '#333333';
-
-    const ear1 = two.makeRectangle(300, 450, 20, 20);
-    ear1.fill = '#333333';
-
-    const group2 = two.makeGroup([ear1]);
-    // group2.translation.set(two.width / 2, two.height / 2);
-    // group2.scale = 0;
-    // group2.noStroke();
-    group2.rotation = 0.2;
     // const ear1 = two.makePath([250, 250, 300, 250, 250, 250], false);
     // ear1.fill = '#333333';
     // const ear2 = two.makePath([275, 275, 325, 275, 275, 275], false);
