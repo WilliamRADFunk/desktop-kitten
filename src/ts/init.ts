@@ -16,28 +16,37 @@ export default () => {
     circle.fill = '#FF8000';
     rect.fill = 'rgba(0, 200, 255, 0.75)';
 
-    const group = two.makeGroup([circle, rect]);
-    group.translation.set(two.width / 2, two.height / 2);
-    group.scale = 0;
-    group.noStroke();
+    const group1 = two.makeGroup([circle, rect]);
+    group1.translation.set(two.width / 2, two.height / 2);
+    group1.scale = 0;
+    group1.noStroke();
 
     const head = two.makeEllipse(300, 500, 50, 25);
     head.fill = '#333333';
-    const ear1 = two.makePolygon(250, 250, 300, 250, false);
+
+    const ear1 = two.makeRectangle(300, 450, 20, 20);
     ear1.fill = '#333333';
-    const ear2 = two.makePolygon(275, 275, 325, 275, false);
-    ear2.fill = '#333333';
+
+    const group2 = two.makeGroup([ear1]);
+    // group2.translation.set(two.width / 2, two.height / 2);
+    // group2.scale = 0;
+    // group2.noStroke();
+    group2.rotation = 0.2;
+    // const ear1 = two.makePath([250, 250, 300, 250, 250, 250], false);
+    // ear1.fill = '#333333';
+    // const ear2 = two.makePath([275, 275, 325, 275, 275, 275], false);
+    // ear2.fill = '#333333';
 
     // Bind a function to scale and rotate the group
     // to the animation loop.
     two.bind(Two.Events.update, () => {
-    // This code is called everytime two.update() is called.
-    // Effectively 60 times per second.
-    if (group.scale > 0.9999) {
-        group.scale = group.rotation = 0;
-    }
-    const t = (1 - group.scale) * 0.125;
-    group.scale += t;
-    group.rotation += t * 4 * Math.PI;
+        // This code is called everytime two.update() is called.
+        // Effectively 60 times per second.
+        if (group1.scale > 0.9999) {
+            group1.scale = group1.rotation = 0;
+        }
+        const t = (1 - group1.scale) * 0.125;
+        group1.scale += t;
+        group1.rotation += t * 4 * Math.PI;
     }).play();  // Finally, start the animation loop
 }
